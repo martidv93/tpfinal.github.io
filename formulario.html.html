@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ventas</title>
+    <link rel="stylesheet" href="formulario.css.css">
+</head>
+<body>
+    <header>
+        <h1>X-nutrition</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="carrito">
+            <p>Carrito de compras <span id="contador">0</span></p>
+            <p>Total: $<span id="total">0.00</span></p>
+        </div>
+    </header>
+
+    <section id="productos">
+        <h2>Productos</h2>
+        <div class="producto">
+            <h3>Proteina chocolate</h3>
+            <p>Marca x body</p>
+            <p>Precio: $<span class="precio">20000</span></p>
+            <button onclick="agregarCarrito('Proteina chocolate', 20000)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Creatina</h3>
+            <p>Marca x-body.</p>
+            <p>Precio: $<span class="precio">15000</span></p>
+            <button onclick="agregarCarrito('Creatina', 15000)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Colageno</h3>
+            <p>Marca One fit.</p>
+            <p>Precio: $<span class="precio">10000</span></p>
+            <button onclick="agregarCarrito('Colageno',10000)">Agregar al Carrito</button>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="formularioContacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 X-nutrition S.R.L.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

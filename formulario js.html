@@ -1,0 +1,18 @@
+let contadorProductos = 0;
+let totalCarrito = 0.00;
+
+function agregarCarrito(producto, precio) {
+    contadorProductos++;
+    totalCarrito += precio;
+    
+    document.getElementById('contador').innerText = contadorProductos;
+    document.getElementById('total').innerText = totalCarrito.toFixed(2);
+    
+    alert(producto + " ha sido agregado al carrito.");
+}
+
+document.getElementById('formularioContacto').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert("Mensaje enviado!");
+    this.reset();
+});
